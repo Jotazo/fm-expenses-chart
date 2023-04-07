@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+
+:root {
+  /*Colors*/
+  --softRed: hsl(10, 79%, 65%);
+  --softRedHover: hsl(10, 91%, 70%);
+  --cyan: hsl(186, 34%, 60%);
+  --cyanHover: hsl(186, 66%, 67%);
+  --darkBrown: hsl(25, 47%, 15%);
+  --mediumBrown: hsl(28, 10%, 53%);
+  --cream: hsl(27, 66%, 92%);
+  --paleOrange: hsl(33, 100%, 98%);
+
+  --fontSize: 18px;
+  --fontFamily: "DM Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--fontFamily);
+  font-size: var(--fontSize);
+}
+
+body {
+  background-color: var(--cream);
+}
+
+.container {
+  margin: 0.5rem;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 1rem;
+}
+
+/* CARD HEADER */
+.card-header {
+  background-color: var(--softRed);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header,
+.card-main {
+  padding: 1rem;
+  border-radius: 0.5em;
+}
+
+.card-header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.balance-text {
+  font-size: 0.9rem;
+}
+
+.balance-numbers {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.card-header-circles {
+  display: flex;
+  position: relative;
+}
+
+.circle {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 10rem;
+}
+
+.circle.underline {
+  position: absolute;
+  right: 25px;
+  border: 3px solid #fff;
+}
+
+.circle.opacity {
+  background-color: #000;
+}
+
+/* CARD MAIN */
+.card-main {
+  background-color: #fff;
+}
+
+/* CARD MAIN DATA */
+.card-main-data {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.card-main-title {
+  font-size: 1.5rem;
+}
+
+.card-main-charts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-main-chart {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card-main-chart-tooltip {
+  background-color: #fff;
+  color: #fff;
+  font-size: 0.6rem;
+  padding: 0.3rem;
+  border-radius: 0.2rem;
+  transition: background-color 0.5s;
+}
+
+.card-main-chart-bar {
+  width: 2.2rem;
+  background-color: var(--softRed);
+  border-radius: 0.15rem;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+.card-main-chart-bar:hover {
+  background-color: var(--softRedHover);
+}
+
+.card-main-chart-bar.active {
+  background-color: var(--cyan);
+}
+
+.card-main-chart-bar.active:hover {
+  background-color: var(--cyanHover);
+}
+
+.card-main-chart-month {
+  font-size: 0.8rem;
+  color: var(--mediumBrown);
+}
+
+.separator {
+  width: 100%;
+  height: 2px;
+  border-radius: 1rem;
+  margin: 1.25rem 0;
+  background-color: var(--cream);
+}
+
+/* CARD MAIN FOOTER */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-footer-total {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.card-footer-total-title,
+.card-footer-last-from {
+  font-size: 0.9rem;
+  color: var(--mediumBrown);
+}
+
+.card-footer-total-amount {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.card-footer-last {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.card-footer-last-percentage {
+  text-align: right;
+  font-weight: 700;
+}
